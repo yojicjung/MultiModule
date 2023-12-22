@@ -1,0 +1,17 @@
+# DB config
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/BOARD?characterEncoding=utf8
+    username: ${db_username}
+    password: ${db_passwd}
+  jpa:
+    database: mysql
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL57Dialect
+        storage_engine: innodb
+        format_sql: true
+    generate-ddl: false
+    open-in-view: false
+    show-sql: true
